@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const userSchema = mongoose.Schema({
 	name: { type: String, maxlength: 50 },
 	email: { type: String, trim: true, unique: 1 }, //trim 띄어쓰기를 없에줌,unique 하나만쓸수있게
-	password: { type: String, maxlength: 5 },
+	password: { type: String, minlength: 5 },
 	lastname: { type: String, maxlength: 50 },
 	role: { type: Number, default: 0 }, //롤을 부여하기위해 설정 (관리자,일반...)
 	image: { type: String },
